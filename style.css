@@ -23,8 +23,7 @@ body{
 .nav__insure{    
     height: auto;
     height: 3.9rem;
-    text-align: center;
-    background-color: red;    
+    text-align: center;    
     background-color: var(--Very-light-gray);
 }
 .nav__first{        
@@ -38,6 +37,10 @@ body{
 }
 .menu--check{
     display: none;
+}
+.img.logo{
+    margin: auto 0;
+    object-fit: contain;    
 }
 .bg--icon{        
     display: flex;
@@ -77,10 +80,11 @@ body{
 .ul.nav{    
     display: block;    
     position: fixed;    
-    top: 3rem;
+    margin-top: 0;
+    top: 3.9rem;
     left:0;
     width: 100vw;    
-    height: 100vh;
+    height: 100%;
     flex-direction: column;
     color: var(--Very-light-gray);
     background-color: var(--color-Very-dark-violet);        
@@ -97,7 +101,7 @@ body{
 }
 .li.nav{
     font-weight: 400;
-    margin: .5rem 3rem;
+    margin: 1.2rem 1.5rem;
     letter-spacing: .2rem;
 }
 .li.nav:last-child{
