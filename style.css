@@ -1,0 +1,115 @@
+:root{
+        /* Primary */
+        --color-Dark-violet:hsl(256, 26%, 20%);
+        --color-Grayish-blue:hsl(216, 30%, 68%);
+        /* Neutral */
+        --color-Very-dark-violet:hsl(270, 9%, 17%);
+        --Dark-grayish-violet:hsl(273, 4%, 51%);
+        --Very-light-gray:hsl(0, 0%, 98%);
+}
+body{
+    margin: 0;
+    padding: 0;    
+    font-family: 'DM Serif Display', serif;
+}
+.container__insure{       
+    width: calc(100vw - (100vw - 100%));
+    height: auto;        
+}
+.content__insure{    
+    margin: auto;        
+    height: auto;    
+}
+.nav__insure{    
+    height: auto;
+    height: 3.9rem;
+    text-align: center;
+    background-color: red;    
+    background-color: var(--Very-light-gray);
+}
+.nav__first{        
+    display: flex;
+    position: relative;
+    justify-items: center;
+    padding-top: .9rem;
+    margin-left: 1.5rem;    
+    margin-right: 1.5rem;    
+    justify-content: space-between;
+}
+.menu--check{
+    display: none;
+}
+.bg--icon{        
+    display: flex;
+    justify-content: center;    
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: var(--Very-light-gray);
+    border: .093rem solid var(--color-Very-dark-violet);
+}
+.menu--logo{    
+    position: relative;
+    top: .4rem;
+    cursor: pointer;
+    margin: .5rem;
+    background-color:  var(--color-Very-dark-violet);
+    width: 1.2rem;
+    height: .1rem;
+}
+.menu--logo::before{
+    content: "";    
+    display: block;
+    position: relative;
+    bottom: 325%;    
+    width: 1.2rem;
+    height: .15rem;    
+    background-color: var(--color-Very-dark-violet);
+}
+.menu--logo::after{
+    content: "";
+    display: block;
+    position: relative;    
+    top: 140%;
+    width: 1.2rem;
+    height: .15rem;
+    background-color: var(--color-Very-dark-violet);
+}
+.ul.nav{    
+    display: block;    
+    position: fixed;    
+    top: 3rem;
+    left:0;
+    width: 100vw;    
+    height: 100vh;
+    flex-direction: column;
+    color: var(--Very-light-gray);
+    background-color: var(--color-Very-dark-violet);        
+    line-height: 3rem;    
+    list-style: none;
+    padding-left: 0;    
+}
+.ul.nav.mobil{
+    background-image: url(insure-landing-page-master/images/bg-pattern-mobile-nav.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    color: var(--Very-light-gray);
+}
+.li.nav{
+    font-weight: 400;
+    margin: .5rem 3rem;
+    letter-spacing: .2rem;
+}
+.li.nav:last-child{
+    color: var(--Very-light-gray);
+    border: .2rem solid ;
+}
+.link--nav{
+    display: block;    
+    text-decoration: none;    
+    width: 100%;    
+    color: var(--Very-light-gray);
+}
+.menu--check:checked ~ .ul.nav{
+    display: none;
+}
