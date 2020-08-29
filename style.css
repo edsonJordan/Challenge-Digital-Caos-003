@@ -100,7 +100,7 @@ body{
 
 
 .ul.nav{    
-    display: block;    
+    display: none;    
     position: fixed;    
     margin-top: 0;
     top: 3.9rem;
@@ -137,5 +137,5 @@ body{
     color: var(--Very-light-gray);
 }
 .menu--check:checked ~ .ul.nav{
-    display: none;
+    display: block;
 }
