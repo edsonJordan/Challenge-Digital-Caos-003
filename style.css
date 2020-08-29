@@ -10,13 +10,15 @@
 body{
     margin: 0;
     padding: 0;    
-    font-family: 'DM Serif Display', serif;
+    height: auto; 
 }
 .container__insure{       
     width: calc(100vw - (100vw - 100%));
     height: auto;        
 }
-.content__insure{    
+.content__insure{  
+    display: flex;  
+    flex-direction: column;
     margin: auto;        
     height: auto;    
 }
@@ -134,15 +136,15 @@ body{
 @keyframes animate-check {
     0% {
       transform: translateY(-100px);
-      opacity: 0;
+      opacity: 0;      
     }
     50% {
-      transform: translateY(-180px);
+      transform: translateY(-180px);      
       opacity: 0.5;
     }
     70% {
         transform: translateY(50px);
-        opacity: 0.5;
+        opacity: 0.7;
       }
     100% {
       transform: translateY(0);
@@ -150,7 +152,31 @@ body{
     }
   }
 .menu--check:checked ~ .ul.nav{
-    animation: animate-check 2s forwards;
+    animation: animate-check 1.5s forwards;
     display: block;
 }
+.section{
+    font-family: 'DM Serif Display', serif;
+}
+.h1,.span{
+    display: block;
+}
+.section.img.slider{    
+    min-width: 320px;
+    min-height:451px;    
+    background-image: url(insure-landing-page-master/images/image-intro-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.section.humanizing{
+    background-color: var(--Dark-grayish-violet);
+}
+.content-section{    
+    position: relative;    
+    height: auto;
+    margin: auto 1.5rem;
+    
+    text-align: center;
+}
+
 
