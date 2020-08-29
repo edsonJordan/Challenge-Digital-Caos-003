@@ -169,13 +169,14 @@ body{
     background-repeat: no-repeat;
 }
 .section.humanizing{
-    background-color: var(--Dark-grayish-violet);
+    background-color: var(--color-Dark-violet);
+    color: var(--Very-light-gray);
 }
 .content-section{    
+    letter-spacing: .05rem;
     position: relative;    
     height: auto;
-    margin: auto 1.5rem;
-    
+    margin: auto 1.5rem;    
     text-align: center;
 }
 
