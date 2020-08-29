@@ -25,6 +25,7 @@ body{
     height: 3.9rem;
     text-align: center;    
     background-color: var(--Very-light-gray);
+    font-family: 'Karla', sans-serif;
 }
 .nav__first{        
     display: flex;
@@ -50,7 +51,7 @@ body{
     background-color: var(--Very-light-gray);
     border: .093rem solid var(--color-Very-dark-violet);
 }
-.menu--logo{    
+.menu--logo{        
     position: relative;
     top: .4rem;
     cursor: pointer;
@@ -63,7 +64,8 @@ body{
     content: "";    
     display: block;
     position: relative;
-    bottom: 325%;    
+    transition: top .4s;     
+    top: -345%;    
     width: 1.2rem;
     height: .15rem;    
     background-color: var(--color-Very-dark-violet);
@@ -71,12 +73,32 @@ body{
 .menu--logo::after{
     content: "";
     display: block;
-    position: relative;    
+    position: relative;   
+    transition: top .4s; 
     top: 140%;
     width: 1.2rem;
     height: .15rem;
     background-color: var(--color-Very-dark-violet);
 }
+.menu--check:checked + .menu--logo{
+    background-color:transparent;
+}
+.menu--check:checked + .menu--logo::before{
+    top: -.09rem;  
+    transition: transform .3s;
+    transform: rotate(-45deg) ;  
+    
+}
+.menu--check:checked + .menu--logo::after{
+    top: -.2rem;
+    transition: transform .3s;    
+    transform: rotate(-135deg) ; 
+}
+
+
+
+
+
 .ul.nav{    
     display: block;    
     position: fixed;    
