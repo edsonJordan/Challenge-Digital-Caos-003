@@ -23,6 +23,8 @@ body{
     height: auto;    
 }
 .nav__insure{    
+    position: fixed;
+    width: 100%;
     height: auto;
     height: 3.9rem;
     text-align: center;    
