@@ -11,6 +11,7 @@ body{
     margin: 0;
     padding: 0;    
     height: auto; 
+    overflow-x: hidden;
 }
 .container__insure{       
     width: calc(100vw - (100vw - 100%));
@@ -28,8 +29,7 @@ body{
     height: auto;
     height: 3.9rem;
     text-align: center;    
-    background-color: var(--Very-light-gray);
-    font-family: 'Karla', sans-serif;
+    background-color: var(--Very-light-gray);    
 }
 .nav__first{        
     display: flex;
@@ -98,6 +98,12 @@ body{
     transition: transform .3s;    
     transform: rotate(-135deg) ; 
 }
+.ul{
+    line-height: 3rem;    
+    list-style: none;
+    padding-left: 0;  
+    font-family: 'Karla', sans-serif;
+}
 .ul.nav{    
     display: none;    
     position: fixed;    
@@ -109,9 +115,7 @@ body{
     flex-direction: column;
     color: var(--Very-light-gray);
     background-color: var(--color-Very-dark-violet);        
-    line-height: 3rem;    
-    list-style: none;
-    padding-left: 0;    
+     
 }
 .ul.nav.mobil{
     background-image: url(insure-landing-page-master/images/bg-pattern-mobile-nav.svg);
@@ -120,14 +124,21 @@ body{
     background-position: bottom;
     color: var(--Very-light-gray);
 }
-.li.nav{
+.li{
+    list-style: none;
+    letter-spacing: .2rem;
+}
+.li.nav{    
     font-weight: 400;
     margin: 1.2rem 1.5rem;
-    letter-spacing: .2rem;
+    
 }
 .li.nav:last-child{
     color: var(--Very-light-gray);
     border: .2rem solid ;
+}
+.link{
+    text-decoration: none;    
 }
 .link--nav{
     display: block;    
@@ -156,6 +167,7 @@ body{
 .menu--check:checked ~ .ul.nav{
     animation: animate-check 1.5s forwards;
     display: block;
+    
 }
 .section{
     font-family: 'DM Serif Display', serif;
@@ -163,23 +175,145 @@ body{
 .h1,.span{
     display: block;
 }
+.h1.humanizing{
+    margin-top: 3.5rem;
+}
 .section.img.slider{    
     min-width: 320px;
     min-height:451px;    
-    background-image: url(insure-landing-page-master/images/image-intro-mobile.jpg);
+    background-image: url(insure-landing-page-master/images/image-intro-mobile.jpg), url(insure-landing-page-master/images/image-intro-mobile.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: left top, right bottom;
 }
-.section.humanizing{
-    background-color: var(--color-Dark-violet);
+.humanizing--double{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, var(--color-Dark-violet) 65%,var(--Very-light-gray) 65%);
+}
+.section.humanizing{       
+    min-height: 40rem;
+    
+    /* background-image: url(insure-landing-page-master/images/bg-pattern-intro-left-mobile.svg), url(insure-landing-page-master/images/bg-pattern-intro-right-mobile.svg); */
+    background-repeat: no-repeat;
     color: var(--Very-light-gray);
+    
+    background-image: url(insure-landing-page-master/images/bg-pattern-intro-left-mobile.svg), url(insure-landing-page-master/images/bg-pattern-intro-right-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: left top, right bottom;
 }
+
 .content-section{    
     letter-spacing: .05rem;
-    position: relative;    
+    /* position:relative */        
     height: auto;
     margin: auto 1.5rem;    
     text-align: center;
 }
+.button {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    outline: none;
+    padding: .3rem 1.4rem;
+    box-sizing: border-box;
+    
+    
+}
+.button.humanizing{
+    border: .15rem solid var(--Very-light-gray);
+    color: var(--Very-light-gray);
+    background-color: var(--color-Dark-violet);
+}
+.section.were{    
+    column-gap: 4rem;
+    background-color: var(--Very-light-gray);
+    margin-bottom: 8rem;
+}
+.content-section.were{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+.cards.were{
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+.h1.were{
+    color: var(--color-Very-dark-violet);
+}
+.h3.card{
+    color: var(--color-Very-dark-violet);
+}
+.span.card{
+    color: var(--Dark-grayish-violet);
+}
+.container--find{    
+    background-color: var(--color-Dark-violet);
+    background-image: url(insure-landing-page-master/images/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right top;        
+}
+.content--find{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3rem 2rem;
+}
+.h1.find{
+    color: var(--Very-light-gray);
+}
+.button.find{
+    margin: auto;
+    border: .15rem solid var(--Very-light-gray);
+    color: var(--Very-light-gray);
+    background-color: var(--color-Dark-violet);
+}
+.section.footer{
+    display: flex;
+    flex-direction: column;    
+    background-color: var(--Very-light-gray);
+}
+.top--footer{
+    background-image: url(insure-landing-page-master/images/bg-pattern-footer-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;    
+}
+.content--top{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    row-gap: 1.3rem;
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;    
+}
+.bottom.footer{
+    display: flex;
+    flex-direction: column;  
+    
+}
+.bottom--option{
+    display: flex;
+    flex-direction: column;  
+    text-align: center;
+}
+.link{
+    color: var(--color-Very-dark-violet);
+    font-size: .8rem;        
+    letter-spacing: 0em;
+}
+.li.foot{
+    line-height: 1.2rem;
+}
+.li.foot.primary{
+    margin-bottom:1.2rem;
+}
+.link.primary{    
+    color: var(--Dark-grayish-violet);    
+}
 
-
+.none{
+    display: none;
+}
