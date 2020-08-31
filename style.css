@@ -343,7 +343,7 @@ body{
         }
         .bg--icon{            
             border: none;
-            width: -webkit-fill-available;
+            width:100%;
         }
         .ul{
             line-height: initial;
